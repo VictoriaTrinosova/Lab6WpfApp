@@ -70,8 +70,19 @@ namespace Lab6WpfApp
             else
                 return 0;
         }
+        public WeatherControl(int temperature, string windDirection, string windSpeed)
+        {
+            this.Temperature = temperature;
+            this.WindDirection = windDirection;
+            this.WindSpeed = windSpeed;
+        }
+        public string Print()
+        {
+            return $"{Temperature} {WindDirection} {WindSpeed} {typeof(precipitation)}";
+        }
     }
-        
+
+
     public partial class MainWindow : Window
     {
         public MainWindow()
